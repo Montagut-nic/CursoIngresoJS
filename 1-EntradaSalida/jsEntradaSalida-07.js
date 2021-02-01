@@ -7,27 +7,27 @@ function sumar()
 {	
 	let suma;
 	suma = parseInt(txtIdNumeroUno.value) + parseInt(txtIdNumeroDos.value);
-	alert("la suma es "+suma);	
+	alert("El resultado de la suma es "+suma);	
 }
 
 function restar()
 {
 	let resta;
 	resta=parseInt(txtIdNumeroUno.value)+parseInt(txtIdNumeroDos.value);
-	alert ('la resta es '+resta);
+	alert ("El resultado de la resta es "+resta);
 }
 
 function multiplicar()
 { 
 	let multiplicación;
 	multiplicación=parseInt(txtIdNumeroUno.value)*parseInt(txtIdNumeroDos.value);
-	alert ('la multiplicación es '+multiplicación);
+	alert ("El resultado de la multiplicación es "+multiplicación);
 }
 
 function dividir()
 {
 	let división;
 	división=parseInt(txtIdNumeroUno.value)/parseInt(txtIdNumeroDos.value);
-	alert ('la división es '+división);
+	alert ("El resultado de la división es "+división);
 }
 

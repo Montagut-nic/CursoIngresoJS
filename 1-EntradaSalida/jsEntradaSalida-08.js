@@ -7,5 +7,5 @@ function SacarResto()
 {
 	let resto;
 	resto=parseInt(txtIdNumeroDividendo.value)%parseInt(txtIdNumeroDivisor.value);
-	alert("el resto es "+resto);
+	alert("El resto es "+resto);
 }

@@ -6,6 +6,6 @@ function sumar()
 {
 	let resultado;
 	resultado = parseInt (txtIdNumeroUno.value) + parseInt (txtIdNumeroDos.value);
-	alert('la suma es '+resultado);
+	alert("la suma es "+resultado);
 }
 
