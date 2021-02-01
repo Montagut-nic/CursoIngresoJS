@@ -4,6 +4,8 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
-	alert("ok");
+	let resultado;
+	resultado = parseInt (txtIdNumeroUno.value) + parseInt (txtIdNumeroDos.value);
+	alert('la suma es '+resultado);
 }
 
