@@ -6,6 +6,8 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	let descontado;
-	descontado=parseInt(txtIdImporte.value)-parseInt(txtIdImporte.value)*0.25;
-	txtIdResultado.value=descontado;
+	let importe;
+	importe = parseInt(document.getElementById('txtIdImporte').value);
+	descontado=importe-importe*0.25;
+	document.getElementById('txtIdResultado').value=descontado;
 }

@@ -3,31 +3,37 @@ Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
+
+let num1;
+let num2;
+num1 = parseInt(document.getElementById('txtIdNumeroUno').value);
+num2 = parseInt(document.getElementById('txtIdNumeroDos').value);
+
 function sumar()
 {	
 	let suma;
-	suma = parseInt(txtIdNumeroUno.value) + parseInt(txtIdNumeroDos.value);
+	suma = num1+num2;
 	alert("El resultado de la suma es "+suma);	
 }
 
 function restar()
 {
 	let resta;
-	resta=parseInt(txtIdNumeroUno.value)+parseInt(txtIdNumeroDos.value);
+	resta=num1-num2;
 	alert ("El resultado de la resta es "+resta);
 }
 
 function multiplicar()
 { 
 	let multiplicación;
-	multiplicación=parseInt(txtIdNumeroUno.value)*parseInt(txtIdNumeroDos.value);
+	multiplicación=num1*num2;
 	alert ("El resultado de la multiplicación es "+multiplicación);
 }
 
 function dividir()
 {
 	let división;
-	división=parseInt(txtIdNumeroUno.value)/parseInt(txtIdNumeroDos.value);
+	división=num1/num2;
 	alert ("El resultado de la división es "+división);
 }
 

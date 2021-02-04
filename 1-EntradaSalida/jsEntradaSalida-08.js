@@ -6,6 +6,10 @@ ej.: "El resto es 0 ."*/
 function SacarResto()
 {
 	let resto;
-	resto=parseInt(txtIdNumeroDividendo.value)%parseInt(txtIdNumeroDivisor.value);
+	let num1;
+	let num2;
+	num1=parseInt(document.getElementById('txtIdNumeroDividendo').value);
+	num2=parseInt(document.getElementById('txtIdNumeroDivisor').value);
+	resto=num1%num2;
 	alert("El resto es "+resto);
 }
