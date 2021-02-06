@@ -14,9 +14,9 @@ function Sumar ()
 	precioDos = document.getElementById('txtIdPrecioDos').value;
 	precioTres = document.getElementById('txtIdPrecioTres').value;
 
-	precioUno= parseInt(precioUno);
-	precioDos = parseInt(precioDos);
-	precioTres = parseInt(precioTres);
+	precioUno= parseFloat(precioUno);
+	precioDos = parseFloat(precioDos);
+	precioTres = parseFloat(precioTres);
 
 	suma=precioUno+precioDos+precioTres;
 
@@ -35,12 +35,13 @@ function Promedio ()
 	precioDos = document.getElementById('txtIdPrecioDos').value;
 	precioTres = document.getElementById('txtIdPrecioTres').value;
 
-	precioUno= parseInt(precioUno);
-	precioDos = parseInt(precioDos);
-	precioTres = parseInt(precioTres);
+	precioUno= parseFloat(precioUno);
+	precioDos = parseFloat(precioDos);
+	precioTres = parseFloat(precioTres);
 
 	suma = precioUno+precioDos+precioTres;
 	promedio = suma/3;
+	promedio = promedio.toFixed(2);
 	
 	alert ("El promedio de los precios es "+promedio);
 }
@@ -56,12 +57,13 @@ function PrecioFinal ()
 	precioDos = document.getElementById('txtIdPrecioDos').value;
 	precioTres = document.getElementById('txtIdPrecioTres').value;
 
-	precioUno= parseInt(precioUno);
-	precioDos = parseInt(precioDos);
-	precioTres = parseInt(precioTres);
+	precioUno= parseFloat(precioUno);
+	precioDos = parseFloat(precioDos);
+	precioTres = parseFloat(precioTres);
 
 	sumaPrecios=precioUno+precioDos+precioTres;
 	ivaAgregado=sumaPrecios*1.21;
+	ivaAgregado=ivaAgregado.toFixed(2);
 
 	alert("El precio final, con IVA, es "+ivaAgregado);
 }
