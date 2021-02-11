@@ -1,8 +1,10 @@
 function mostrar()
 {
 	let nota;
+	let maximo = 10;
+	let minimo = 1;
 	
-	nota=Math.floor((Math.random() * 10) + 1);//Genero el número RANDOM entre 1 y 10 
+	nota=Math.round((Math.random() * (maximo - minimo)) + minimo);//Genero el número RANDOM entre 1 y 10 
 	
 	if (nota<4) 
 	{
