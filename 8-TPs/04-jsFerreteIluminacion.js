@@ -92,7 +92,99 @@ function CalcularPrecio ()
  		{
  			descuento=precioSinDescuento*.5;
  		}
+ 	}
+
+ 	version 2:
+
+ 	switch(marcaLamparas) 
+ 	{
+ 		case "ArgentinaLuz":
+ 		
+ 			switch (cantidadLamparas)
+ 			{
+ 				case 5:
+ 					descuento=precioSinDescuento*.4;
+ 					break;
+ 				
+ 				case 4: 
+ 					descuento=precioSinDescuento*.25;
+ 					break;
+ 	
+ 				case 3: 			
+ 					descuento=precioSinDescuento*.15;
+ 					break;
+ 				
+ 				case 2:
+ 				case 1:
+ 					descuento=0;
+ 					break;
+ 				
+ 				default: 
+ 					descuento=precioSinDescuento*.5;
+ 					break;
+ 				
+ 			}
+ 			break;
+ 		
+ 		case "FelipeLamparas": 
+ 		
+ 			switch(cantidadLamparas)
+ 			{
+ 				case 5:
+ 					descuento=precioSinDescuento*.3;
+ 					break;
+ 				
+ 				case 4:
+ 					descuento=precioSinDescuento*.25;
+ 					break;
+ 				
+ 				case 3: 
+ 					descuento=precioSinDescuento*.1;
+ 					break;
+ 				
+ 				case 2:
+ 				case 1: 
+ 					descuento=0;
+ 					break;
+
+ 				default: 
+ 					descuento=precioSinDescuento*.5;
+ 					break;
+ 				
+ 			}
+ 			break;
+ 		
+ 		default: 
+ 		
+ 			switch (cantidadLamparas)
+ 			{
+ 				case 5:
+ 					descuento=precioSinDescuento*.3;
+ 					break;
+ 				
+ 				case 4:
+ 					descuento=precioSinDescuento*.2;
+ 					break;
+ 				
+ 				case 3:
+ 					descuento=precioSinDescuento*.05;
+ 					break;
+ 				
+ 				case 2:
+ 				case 1:
+ 					descuento=0
+ 				
+ 				default:
+ 					descuento=precioSinDescuento*.5;
+ 					break;
+ 				
+ 			}
+ 			break;
+ 		
  	}*/
+
+
+ 	
 
  	// Parte 2: todo con if
 
@@ -151,77 +243,62 @@ function CalcularPrecio ()
  		alert("No se puede comprar menos de 1 lámpara.");
  	}*/
 
-//Parte 3: 1 if y el resto switch
+//Parte 3: if para cantidad, switch para marca
 
  	/*if(cantidadLamparas<6)
  	{
- 		switch (cantidadLamparas)
+ 		if (cantidadLamparas==5) 
  		{
- 			case 1 : 
- 			case 2 : 
+ 			switch(marcaLamparas)
  			{
- 				descuento=0;
- 				break;
+ 				case "ArgentinaLuz":
+ 					descuento=precioSinDescuento*.4;
+ 					break;
+ 			
+ 				default: 
+ 					descuento=precioSinDescuento*.3;
+ 					break;
  			}
- 			case 3 :
- 			{
- 				switch(marcaLamparas)
- 				{
- 					case "ArgentinaLuz" : 
- 					{
- 						descuento=precioSinDescuento*.15;
- 						break;
- 					}
- 					case "FelipeLamparas" : 
- 					{
- 						descuento=precioSinDescuento*.1;
- 						break;
- 					}
- 					default : 
- 					{
- 						descuento=precioSinDescuento*.05;
- 					}
- 				}
- 				break;
- 			}
- 			case 4 : 
+ 		}
+ 		else 
+ 		{
+ 			if (cantidadLamparas==4)
  			{
  				switch(marcaLamparas)
  				{
  					case "ArgentinaLuz":
  					case "FelipeLamparas":
- 					{
  						descuento=precioSinDescuento*.25;
  						break;
- 					}
+ 					
  					default:
- 					{
  						descuento=precioSinDescuento*.2;
- 					}
- 				}
- 				break;
- 			}
- 			case 5 : 
- 			{
- 				switch(marcaLamparas)
- 				{
- 					case "ArgentinaLuz":
- 					{
- 						descuento=precioSinDescuento*.4;
  						break;
- 					}
- 					default: 
+ 				}
+ 			}
+ 			else 
+ 			{ 
+ 				if (cantidadLamparas==3) 
+ 				{
+ 					switch(marcaLamparas)
  					{
- 						descuento=precioSinDescuento*.3;
+ 						case "ArgentinaLuz" : 
+ 							descuento=precioSinDescuento*.15;
+ 							break;
+
+ 						case "FelipeLamparas" : 
+ 							descuento=precioSinDescuento*.1;
+ 							break;
+
+ 						default :
+ 							descuento=precioSinDescuento*.05;
+ 							break;
  					}
  				}
- 				break;
- 			}
- 			default:
- 			{
- 				descuento=0;
- 				precioSinDescuento=0;
- 				alert("La cantidad de lámparas a comprar no puede ser menor a 1.");
+ 				else 
+ 				{
+ 					descuento=0;
+ 				}
  			}
  		}
  	}
@@ -230,118 +307,58 @@ function CalcularPrecio ()
  		descuento=precioSinDescuento*.5;
  	}*/
 
- 	// Parte 4: 1 switch y el resto if
+ 	// Parte 4: switch para cantidad, if para marca
 
- 	switch(marcaLamparas)
+ 	switch(cantidadLamparas)
  	{
+ 		case 5:
+ 			if (marcaLamparas=="ArgentinaLuz")
+ 			{
+ 				descuento=precioSinDescuento*.4;
+ 			}
+ 			else 
+ 			{
+ 				descuento=precioSinDescuento*.3;
+ 			}
+ 			break;
+
+ 		case 4:
+ 			if (marcaLamparas=="ArgentinaLuz"||marcaLamparas=="FelipeLamparas")
+ 			{
+ 				descuento=precioSinDescuento*.25;
+ 			}
+ 			else 
+ 			{
+ 				descuento=precioSinDescuento*.2;
+ 			}
+ 			break;
+
+ 		case 3:
+ 			if (marcaLamparas!="ArgentinaLuz"&&marcaLamparas!="FelipeLamparas") 
+ 			{
+ 				descuento=precioSinDescuento*.05;
+ 			}
+ 			else 
+ 			{
+ 				if (marcaLamparas=="FelipeLamparas")
+ 				{
+ 					descuento=precioSinDescuento*.1;
+ 				}
+ 				else 
+ 				{
+ 					descuento=precioSinDescuento*.15;
+ 				}
+ 			}
+ 			break;
+
+ 		case 2:
+ 		case 1:
+ 			descuento=0;
+ 			break;
+
  		default:
- 		{
- 			if (cantidadLamparas>0) 
- 			{
- 				if (cantidadLamparas<6) 
- 				{
- 					if (cantidadLamparas<3) 
- 					{
- 						descuento=0;
- 					} 
- 					else if (cantidadLamparas==3) 
- 					{
- 						descuento=precioSinDescuento*.05;
- 					}
- 					else if (cantidadLamparas==4) 
- 					{
- 						descuento=precioSinDescuento*.2;
- 					}
- 					else 
- 					{
- 						descuento=precioSinDescuento*.3;
- 					}
- 				}
- 				else 
- 				{
- 					descuento=precioSinDescuento*.5;
- 				}
- 			}
- 			else 
- 			{
- 				descuento=0;
- 				precioSinDescuento=0;
- 				alert("La cantidad de lámparas a comprar no puede ser menor a 1.");
- 			}
+ 			descuento=precioSinDescuento*.5;
  			break;
- 		}
- 		case "ArgentinaLuz":
- 		{
- 			if (cantidadLamparas>0) 
- 			{
- 				if (cantidadLamparas<6) 
- 				{
- 					if (cantidadLamparas<3) 
- 					{
- 						descuento=0;
- 					} 
- 					else if (cantidadLamparas==3) 
- 					{
- 						descuento=precioSinDescuento*.15;
- 					}
- 					else if (cantidadLamparas==4) 
- 					{
- 						descuento=precioSinDescuento*.25;
- 					}
- 					else 
- 					{
- 						descuento=precioSinDescuento*.4;
- 					}
- 				}
- 				else 
- 				{
- 					descuento=precioSinDescuento*.5;
- 				}
- 			}
- 			else 
- 			{
- 				descuento=0;
- 				precioSinDescuento=0;
- 				alert("La cantidad de lámparas a comprar no puede ser menor a 1.");
- 			}
- 			break;
- 		}
- 		case "FelipeLamparas": 
- 		{
- 			if (cantidadLamparas>0) 
- 			{
- 				if (cantidadLamparas<6) 
- 				{
- 					if (cantidadLamparas<3) 
- 					{
- 						descuento=0;
- 					} 
- 					else if (cantidadLamparas==3) 
- 					{
- 						descuento=precioSinDescuento*.1;
- 					}
- 					else if (cantidadLamparas==4) 
- 					{
- 						descuento=precioSinDescuento*.25;
- 					}
- 					else 
- 					{
- 						descuento=precioSinDescuento*.3;
- 					}
- 				}
- 				else 
- 				{
- 					descuento=precioSinDescuento*.5;
- 				}
- 			}
- 			else 
- 			{
- 				descuento=0;
- 				precioSinDescuento=0;
- 				alert("La cantidad de lámparas a comprar no puede ser menor a 1.");
- 			}
- 			break;
- 		}
  	}
 
  	precioConDescuento=precioSinDescuento - descuento;
@@ -349,7 +366,6 @@ function CalcularPrecio ()
  	if (precioConDescuento>119) 
  	{
  		ingresosBrutos=precioConDescuento*.1;
- 		
  		precioConDescuento=precioConDescuento+ingresosBrutos;
  		
  		ingresosBrutos=ingresosBrutos.toFixed(2);
